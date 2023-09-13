@@ -1,0 +1,15 @@
+
+server:
+  port: 8011
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Iv1.a9ec7aefce1c7562
+            clientSecret: e3028e5f3312f27e283852bca108e9fbd1072b78
+          google:
+            clientId: 965090738019-nhqkqhssn1ae1tq59mm7mgo9t0sdaunl.apps.googleusercontent.com
+            clientSecret: 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

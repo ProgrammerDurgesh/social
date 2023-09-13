@@ -1,0 +1,7 @@
+# Stage 1: Run the application
+FROM openjdk:11
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} social.jar
+ENTRYPOINT ["java","-jar","/social.jar"]
+EXPOSE 8011
+CMD ["java", "-jar", "app.jar"]
