@@ -1,0 +1,47 @@
+	map.from(properties::getClientId).to(builder::clientId);
+		map.from(properties::getClientSecret).to(builder::clientSecret);
+		map.from(properties::getClientAuthenticationMethod)
+			.as(ClientAuthenticationMethod::new)
+			.to(builder::clientAuthenticationMethod);
+		map.from(properties::getAuthorizationGrantType)
+			.as(AuthorizationGrantType::new)
+			.to(builder::authorizationGrantType);
+		map.from(properties::getRedirectUri).to(builder::redirectUri);
+		map.from(properties::getScope).as(StringUtils::toStringArray).to(builder::scope);
+		map.from(properties::getClientName).to(builder::clientName);]
+		
+		
+		
+			private String authorizationUri;
+
+		/**
+		 * Token URI for the provider.
+		 */
+		private String tokenUri;
+
+		/**
+		 * User info URI for the provider.
+		 */
+		private String userInfoUri;
+
+		/**
+		 * User info authentication method for the provider.
+		 */
+		private String userInfoAuthenticationMethod;
+
+		/**
+		 * Name of the attribute that will be used to extract the username from the call
+		 * to 'userInfoUri'.
+		 */
+		private String userNameAttribute;
+
+		/**
+		 * JWK set URI for the provider.
+		 */
+		private String jwkSetUri;
+
+		/**
+		 * URI that can either be an OpenID Connect discovery endpoint or an OAuth 2.0
+		 * Authorization Server Metadata endpoint defined by RFC 8414.
+		 */
+		private String issuerUri;
